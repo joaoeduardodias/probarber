@@ -1,3 +1,7 @@
+import { Logo } from "@/components/Logo";
+
 export default function Home() {
-  return <h1>hello word</h1>;
+  return (
+    <Logo />
+  )
 }
