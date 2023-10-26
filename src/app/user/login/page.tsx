@@ -1,4 +1,5 @@
 import LoginImg from '@/assets/Imagem.png'
+import { Button } from '@/components/Button'
 import * as Input from '@/components/Input'
 import { Logo } from '@/components/Logo'
 import { Lock, Mail } from 'lucide-react'
@@ -27,7 +28,7 @@ export default function Login() {
               </Input.Prefix>
               <Input.Control placeholder="Senha" />
             </Input.Root>
-            <button>Entrar</button>
+            <Button disabled>Entrar</Button>
           </form>
           <span>Esqueci minha senha</span>
         </div>
