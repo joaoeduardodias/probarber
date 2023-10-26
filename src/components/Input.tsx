@@ -25,7 +25,7 @@ export function Root(props: InputRootProps) {
     <div
       className={twMerge(
         'flex w-full items-center gap-2 rounded-md bg-inputs px-3 py-2',
-        'focus-within:border-violet-300 focus-within:ring-4 focus-within:ring-violet-100',
+        'focus-within:border-amber-600 focus-within:ring-2 focus-within:ring-orange',
         props.className,
       )}
       {...props}

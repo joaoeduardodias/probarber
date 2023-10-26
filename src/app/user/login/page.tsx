@@ -1,10 +1,10 @@
 import LoginImg from '@/assets/Imagem.png'
 import { Button } from '@/components/Button'
 import * as Input from '@/components/Input'
+import { Link } from '@/components/Link'
 import { Logo } from '@/components/Logo'
 import { Lock, LogIn, Mail } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Login() {
   return (
@@ -30,16 +30,13 @@ export default function Login() {
             </Input.Root>
             <Button className="mt-2">Entrar</Button>
           </form>
-          <Link
-            href="/user/resetPassword"
-            className="cursor-pointer text-center"
-          >
-            Esqueci minha senha
-          </Link>
+          <Link href="/user/resetPassword">Esqueci minha senha</Link>
         </div>
         <Link
           href="/user/create"
-          className="mt-20 flex items-center gap-2 text-orange"
+          type="withIcon"
+          color="secondary"
+          className="mt-20"
         >
           <LogIn className="h-5 w-5" />
           Criar conta
