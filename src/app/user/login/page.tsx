@@ -2,7 +2,7 @@ import LoginImg from '@/assets/Imagem.png'
 import { Button } from '@/components/Button'
 import * as Input from '@/components/Input'
 import { Logo } from '@/components/Logo'
-import { Lock, Mail } from 'lucide-react'
+import { Lock, LogIn, Mail } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,24 +15,35 @@ export default function Login() {
           <strong className="mt-20 text-center text-2xl font-medium">
             Faça seu login
           </strong>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-2">
             <Input.Root>
               <Input.Prefix>
                 <Mail className="h-5 w-5 text-gray_hard" />
               </Input.Prefix>
-              <Input.Control placeholder="E-mail" />
+              <Input.Control placeholder="E-mail" type="email" />
             </Input.Root>
             <Input.Root>
               <Input.Prefix>
                 <Lock className="h-5 w-5 text-gray_hard" />
               </Input.Prefix>
-              <Input.Control placeholder="Senha" />
+              <Input.Control placeholder="Senha" type="password" />
             </Input.Root>
-            <Button disabled>Entrar</Button>
+            <Button className="mt-2">Entrar</Button>
           </form>
-          <span>Esqueci minha senha</span>
+          <Link
+            href="/user/resetPassword"
+            className="cursor-pointer text-center"
+          >
+            Esqueci minha senha
+          </Link>
         </div>
-        <Link href="/user/create">Criar conta</Link>
+        <Link
+          href="/user/create"
+          className="mt-20 flex items-center gap-2 text-orange"
+        >
+          <LogIn className="h-5 w-5" />
+          Criar conta
+        </Link>
       </div>
       <Image
         src={LoginImg}
