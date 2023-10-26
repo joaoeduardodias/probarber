@@ -1,9 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  content: [
-   "src/**/*.tsx"
-  ],
+  content: ['src/**/*.tsx'],
   theme: {
     extend: {
       colors: {
@@ -15,9 +13,12 @@ const config: Config = {
         black_medium: '#28262E',
         background: '#312E38',
         inputs: '#232129',
-      }
+      },
+      width: {
+        85: '340px',
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 }
 export default config
